@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-blue: #5758e0;
+    --black: #191919;
+    --dark-black: #111111;
+}
+
+body {
+    font-family: jost;
+}
+
+header nav ul li:last-child a {
+    border-color: var(--dark-blue) !important;
+}
+
+header nav ul li a {
+    transition: 0.5s all;
+}
+
+header nav ul li:hover a {
+    color: var(--dark-blue) !important;
+}
+
+header nav ul li:last-child:hover a {
+    background: linear-gradient(90deg, #4848bd, #679ad8);
+    color: white !important;
+}
+
+/* SLIDER */
+
+.carousel-item {
+    background: url(../img/slider.jpg) rgba(1, 1, 1, 0.7);
+    height: 650px;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+
+.carousel-item .carousel-content h1,
+.carousel-content h2 {
+    background: linear-gradient(90deg, #4848bd, #679ad8);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.carousel-content:first-child a {
+    background-color: var(--dark-blue);
+}
+
+.carousel-control-prev {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+/* SERVICES */
+
+.services,
+.about,
+.professional,
+.features,
+.portfolio,
+.video,
+.talks,
+.contact {
+    padding: 100px 0;
+}
+
+.services-item {
+    padding: 30px;
+    background-color: var(--black);
+}
+
+.services-item i:first-child {
+    background: linear-gradient(90deg, #4848bd, #679ad8);
+    color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+.col-4:first-child .services-item::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #4848bd, #679ad8);
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+}
+
+.col-4:first-child .services-item:hover::before {
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.col-4:last-child .services-item::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #4848bd, #679ad8);
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    z-index: -1;
+}
+
+.col-4:last-child .services-item:hover::before {
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.services-item:hover {
+    background: linear-gradient(90deg, #4848bd, #679ad8);
+}
+
+/* ABOUT */
+
+.about {
+    background-color: var(--black);
+}
+
+.about-content h2,
+.professional-content h2,
+.features-content h2,
+.portfolio-content h2,
+.video-content h2,
+.testimonial-content h2,
+.talks-content h2 {
+    font-weight: 500;
+}
+
+.about-content p,
+.professional-content p,
+.portfolio-content p,
+.video-content p,
+.testimonial-content p {
+    font-weight: 300;
+}
+
+.about-content span,
+.professional-content span,
+.talks-content span {
+    height: 5px;
+    width: 70px;
+    background-image: linear-gradient(90deg, #4848bd, #679ad8);
+}
+
+/* PROFESSIONAL */
+
+.professional {
+    background-color: var(--dark-black);
+}
+
+.professional-content ul li i {
+    background: linear-gradient(90deg, #4848bd, #679ad8);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 50px;
+}
+
+/* FEATURES */
+
+.accordion-item button {
+    background-color: var(--black);
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-button {
+    background-image: none;
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-radius: 0%;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--black);
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    background-color: var(--black);
+}
+
+.portfolio-content p,
+.video-content p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.portfolio-img img {
+    transition: 0.3s linear all;
+}
+
+.portfolio-img .portfolio-layer {
+    background-image: linear-gradient(90deg, #4848bdcb, #679ad8bc);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    transition: 0.3s linear all;
+
+}
+
+.portfolio-inner:hover .portfolio-layer {
+    visibility: visible;
+    transform: translateY(-20px);
+}
+
+.portfolio-img:hover img {
+    transform: translateY(-20px);
+}
+
+.portfolio-img .blur h4 {
+    border-bottom: 1px solid gray;
+
+}
+
+.portfolio-img {
+    height: 450px;
+}
+
+/* VIDEO */
+
+.video {
+    background-color: var(--dark-black);
+}
+
+.video-img .video-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.video-img:hover .video-layer {
+    transform: scale(1.6);
+    overflow: hidden;
+    visibility: visible;
+
+}
+
+.video-img .video-layer i {
+    background: linear-gradient(90deg, #4848bdcb, #679ad8bc);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 100px;
+}
+
+/* TESTIMONIAL */
+
+.testimonial-box {
+    background-color: var(--black);
+    transition: 0.3s all;
+}
+
+.testimonial-box:hover {
+    background-image: linear-gradient(90deg, #4848bdcb, #679ad8bc);
+    transform: translateY(-20px);
+}
+
+.testimonial-box:hover i {
+    color: white !important;
+}
+
+.testimonial-box ul li i {
+    background: linear-gradient(90deg, #4848bdcb, #679ad8bc);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin: 0 5px;
+}
+
+.testimonial-box .testimonial-img {
+    width: 40%;
+    margin: 0 auto;
+
+}
+
+.testimonial-box p {
+    font-size: 18px;
+
+}
+
+/* TALKS */
+
+.talks-content input::placeholder {
+    color: gray;
+}
+
+.talks-content button {
+    background-color: var(--dark-blue);
+    color: white;
+}
+
+.talks-content button:hover {
+    background: linear-gradient(90deg, #4848bdf3, #679ad8f4);
+    color: white;
+}
+
+.talks-img .talk-play {
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    background: linear-gradient(90deg, #4848bdf3, #679ad8f4);
+    font-size: 70px;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+
+/* MAP */
+
+.map img {
+    height: 600px;
+
+}
+
+/* CONTACT */
+
+.contact {
+    background-color: var(--dark-black);
+}
+
+.contact-item {
+    padding: 30px;
+    background-color: var(--black);
+}
+
+.contact-item i:first-child {
+    background: linear-gradient(90deg, #4848bd, #679ad8);
+    color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+.contact-item:hover {
+    background: linear-gradient(90deg, #4848bd, #679ad8);
+}

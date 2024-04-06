@@ -1,0 +1,11 @@
+@media(min-width:768px) {
+    .carousel-content {
+        max-width: 60%;
+    }
+}
+
+@media(min-width:992px) {
+    .video-img {
+        width: 60%;
+    }
+}
